@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+/* Ao carregar a página limpa as margens padrão e ajusta o tamanho das caixas */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Cores e fonte escolhidas para um estilo "dark" minimalista */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0 20px;
+    font-size: 0.9rem;
+    color-scheme: dark;
+}
+
+header {
+    padding: 50px 0 30px 0;
+    text-align: center;
+    width: 100%;
+}
+
+header h1 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+
+nav {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+/* Estilo dos botões de filtro */
+nav button {
+    font-size: 1.0rem;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #FFFFFF;
+    border: 1px solid #444;
+    transition: background 0.3s;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex: 1;
+    max-width: 1100px;
+}
+
+/* Estilo da barra onde será inserido a nova tarefa */
+#escrever-tarefa {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    margin-bottom: 30px;
+    background: #111;
+    padding: 25px;
+    border-radius: 20px;
+    border: 1px solid #333;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#tarefa {
+    flex: 3;
+    min-width: 200px;
+}
+
+#prioridade,
+input[type="date"],
+input[type="time"],
+#adicionar-tarefa {
+    flex: 1;
+    min-width: 120px;
+}
+
+input, select, button {
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #222;
+    color: #fff;
+    outline: none;
+}
+
+button {
+    background: #fff;
+    color: #000;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bbb;
+}
+
+.limpar {
+    background-color: #d93025;
+    color: white;
+}
+
+.btn-salvando {
+    background-color: #00BFFF !important;
+    color: #000 !important;
+}
+
+#area-procurar {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    gap: 15px;
+}
+
+#procurar-tarefa {
+    flex: 1;
+    padding: 15px 25px;
+    border-radius: 15px;
+    background: #111;
+}
+
+#filtrar-tarefa {
+    min-width: 180px;
+    border-radius: 15px;
+}
+
+/* Coloquei as colunas estilo Kanban para melhor visualização */
+.lista-tarefas {
+    display: flex;
+    gap: 25px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.coluna {
+    flex: 1;
+    min-width: 0;
+    background: #161616;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #222;
+    min-height: 300px;
+}
+
+.titulo-coluna {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contador {
+    background: #eee;
+    color: #000;
+    padding: 2px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Estilo da tarefa e efeito de hover */
+li {
+    position: relative;
+    background: #0a0a0a;
+    margin-bottom: 12px;
+    padding: 15px 45px 15px 15px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+li:hover {
+    border-color: #555;
+}
+
+.tarefa-urgente { border-left: 6px solid #ff4d4d; }
+.tarefa-importante { border-left: 6px solid #ffa500; }
+.tarefa-tranquilo { border-left: 6px solid #2ecc71; }
+
+.texto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+    cursor: pointer;
+}
+
+.txt-tarefa { font-weight: 600; }
+.txt-detalhes { font-size: 0.8rem; color: #888; }
+
+.atrasado-texto { color: #ff4d4d !important; }
+.atrasado-exclamacao { color: #ff4d4d; font-weight: bold; margin-left: 5px; }
+
+.acoes-tarefa {
+    position: absolute;
+    right: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Botões de editar e excluir dentro de cada tarefa */
+.btn-delete, .btn-edit {
+    background: none !important;
+    border: none !important;
+    color: #666 !important;
+    font-size: 1rem;
+    padding: 0 !important;
+}
+
+.btn-delete:hover { color: #ff4d4d !important; }
+.btn-edit:hover { color: #00BFFF !important; }
+
+/* Espaçamento do rodapé e destaque da frase motivacional em azul */
+footer {
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.frase-motivacional { color: #00BFFF; font-weight: 600; }
+
+/* Ajusta as colunas para ficarem uma embaixo da outra em telas menores */
+@media (max-width: 900px) {
+    .lista-tarefas {
+        flex-direction: column;
+    }
+    
+    #escrever-tarefa {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.tarefa-concluida {
+    opacity: 0.5;
+    background: #050505;
+}
+
+.tarefa-concluida .txt-tarefa {
+    text-decoration: line-through;
+}

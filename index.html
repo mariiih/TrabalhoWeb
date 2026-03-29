@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head> 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tarefas - Organizando a Vida</title>
@@ -17,7 +17,6 @@
             <button id="limpar-tudo" class="limpar">Limpar Tudo</button>
         </nav>
     </header>
-
     <main>
         <form id="escrever-tarefa" onsubmit="event.preventDefault()"> 
             <input type="text" id="tarefa" placeholder="Nova tarefa" required> 
@@ -28,14 +27,11 @@
             </select>
             <input type="date" id="data">
             <input type="time" id="hora">
-            
             <button type="button" id="adicionar-tarefa">Adicionar</button>
             <button type="button" id="cancelar-edição" style="display: none; background-color: #555; color: white;">Cancelar</button>
         </form>
-
         <section id="area-procurar"> 
             <input type="text" id="procurar-tarefa" placeholder="Procurar tarefa...">
-            
             <select id="filtrar-tarefa"> <!-- Filtros para ajudar a encontrar tarefas específicas -->
                 <option value="">Filtrar por...</option>
                 <option value="data">Data e Hora</option>
@@ -45,7 +41,6 @@
                 <option value="atrasadas">Atrasadas</option>
             </select>
         </section>
-
         <section class="lista-tarefas">
             <article class="coluna">
                 <div class="titulo-coluna">
@@ -54,7 +49,6 @@
                 </div>
                 <ul id="lista-pendentes"></ul>
             </article>
-
             <article class="coluna">
                 <div class="titulo-coluna">
                     <h2>Em Andamento</h2> 
@@ -62,7 +56,6 @@
                 </div>
                 <ul id="lista-andamento"></ul>
             </article>
-
             <article class="coluna">
                 <div class="titulo-coluna">
                     <h2>Concluídas</h2> 
@@ -72,11 +65,9 @@
             </article>
         </section>
     </main>
-
     <footer> 
         <p class="frase-motivacional">Continue a nadar...</p> <!--Coloquei a frase da Dory, pois é uma das frases que me inspiram e que eu sempre falo -->
-        </footer>
-
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
